@@ -50,3 +50,38 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+@media (max-width: 960px) {
+  .container {
+    margin: 50px auto;
+    max-width: 340px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  form {
+    padding: 17px;
+    margin-bottom: 20px;
+  }
+  .instructions {
+    padding: 13px;
+    width: 55%;
+    font-size: 14px;
+  }
+  .button {
+    padding: 13px 25px;
+    font-size: 14px;
+    margin-left: 9px;
+  }
+
+  .poem {
+    padding: 20px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  footer {
+    font-size: 12px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
