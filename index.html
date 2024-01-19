@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <h1>AI Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Type a word to base poem after"
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <p>
-        Nature's first green is gold, Her hardest hue to hold. Her early leaf's
-        a flower; But only so an hour. Then leaf subsides to leaf. So Eden sank
-        to grief, So dawn goes down to day. Nothing gold can stay. Robert Frost.
-      </p>
-    </main>
-    <footer>
-      This website was coded by Tali Berlin and is
-      <a href="https://github.com/taliberlin/poem-generator" target="_blank"
-        >open-sourced on GitHub</a
-      >
-    </footer>
+    <div class="container">
+      <header>
+        <h1>AI Poem Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter topic of poem..."
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="button" />
+        </form>
+        <p class="poem">
+          Nature's first green is gold, Her hardest hue to hold. Her early
+          leaf's a flower; But only so an hour. Then leaf subsides to leaf. So
+          Eden sank to grief, So dawn goes down to day. Nothing gold can stay.
+          Robert Frost.
+        </p>
+      </main>
+      <footer>
+        This website was coded by Tali Berlin and is
+        <a href="https://github.com/taliberlin/poem-generator" target="_blank"
+          >open-sourced on GitHub</a
+        >
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
