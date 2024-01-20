@@ -48,9 +48,16 @@ form {
   border-left: 2px solid #1471fd;
   line-height: 1.8;
 }
+.poem strong {
+  color: #1471fd;
+}
 footer {
   text-align: center;
   font-size: 14px;
+}
+footer a {
+  color: #1471fd;
+  text-decoration: none;
 }
 @media (max-width: 960px) {
   .container {
