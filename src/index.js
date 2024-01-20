@@ -1,13 +1,29 @@
-function generatePoem(event) {
-  event.preventDefault();
-
+function generatePoem(response) {
   new Typewriter("#poem", {
-    strings:
-      "Nature's first green is gold, Her hardest hue to hold. Her early leaf's a flower; But only so an hour. Then leaf subsides to leaf. So Eden sank to grief, So dawn goes down to day. Nothing gold can stay. Robert Frost.",
+    strings: response.data.answer,
     autoStart: true,
     delay: 10,
     cursor: "",
   });
 }
+function waitForPoem(event) {
+  event.preventDefault();
+
+  let userInstructions = document.querySelector("#user-instructions").value;
+
+  new Typewriter("#poem", {
+    strings: `Generating a poem about "${userInstructions}"...`,
+    autoStart: true,
+    delay: 10,
+    cursor: "",
+  });
+
+  let apiKey = "o599f3bbe3f722tbacc3ebf3032624a0";
+  let context =
+    "You are a romatic poem-generating AI that loves to write poems.";
+  let prompt = `Generate a poem about ${userInstructions}. Make sure the poem is 4 lines and each line is separated by <br />. Sign the poem at the end, NOT in the beginning, with "SheCodes AI" which is wrapped in a <strong> element`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  axios.get(apiUrl).then(generatePoem);
+}
 let poemFormElement = document.querySelector("#poem-generator");
-poemFormElement.addEventListener("submit", generatePoem);
+poemFormElement.addEventListener("submit", waitForPoem);
